@@ -33,7 +33,7 @@ function calculateTip() {
     and also parsing the output to float for flexibilty in calculation*/
 
   let parseAmount =
-    parseFloat(amount); /* parsing the amount to float for flexibilty*/.
+    parseFloat(amount); /* parsing the amount to float for flexibilty*/
 
   let tipAmt = parseFloat(
     (percentage / 100) * amount
