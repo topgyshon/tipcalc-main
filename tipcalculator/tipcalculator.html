@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="tipcalculator.js" defer></script>
+    <link rel="stylesheet" href="tipcalculator.css">
+</head>
+
+<body>
+
+    <section>
+
+        <div class="head">
+            <h1 id="headText">TIP CALCULATOR</h1>
+        </div>
+
+        <div class="main">
+
+            <!-- div to accept input from user -->
+            <div class="box left">
+
+                    <h3 id="header1"> INPUT INTERFACE</h3>
+
+                <form id="formData">
+                    <div class="formGroup">
+                        <label for="selectCurrency">Choose Currency:</label>
+                        <select class="boxSelect" id="selectCurrency">
+                            <option selected disabled hidden id="currency">Currency</option>
+                            <option value="&#8358;">Naira</option>
+                            <option value="&#36;">Us Dollar</option>
+                            <option value="&#8364;">Euro</option>
+                            <option value="&#163;">Pound</option>
+                            <option value="&#165;">Japanese Yen</option>
+
+                        </select>
+                    </div>
+
+                    <div class="formGroup">
+                        <label for="amount">Amount:</label>
+                        <input type="number" placeholder="Amount" id="amount">
+                    </div>
+
+                    <div class="formGroup">
+                        <label for="percentage">Percentage:</label>
+                        <input type="number" placeholder="%" id="percentage">
+                    </div>
+
+                    <div class="formGroup">
+                        <label for="people">Total Number of Workers:</label>
+                        <input type="number" min="1" placeholder="Number Of People" id="people">
+                    </div>
+
+                    <div id="buttonWrap">
+                        <button type="button" id="solve">Calculate</button>
+                        <button id="refresh" onclick="rset()">Reset</button>
+                    </div>
+
+                </form>
+
+            </div>
+
+            <!-- div to display output on the client-side (computer) -->
+            <div class="box right">
+
+                <h3 id="header2">OUTPUT INTERFACE</H3>
+
+                <div class="output">
+                    <p class="outputTag">Service Amount:</p>
+                    <p id="outputAmount">0</p>
+                </div>
+                <div class="output">
+                    <p class="outputTag">Tip Amount:</p>
+                    <p id="tipAmount">0</p>
+                </div>
+                <div class="output">
+                    <p class="outputTag">Total Amount To Pay:</p>
+                    <p id="totalAmt">0</p>
+                </div>
+                <div class="output">
+                    <p class="outputTag">Tip per person:</p>
+                    <p id="perPerson">0</p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+</body>
+
+</html>
